@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import { Link} from 'react-router-dom';
 
+import USFlag from "../../Assets/vendor/flag-icon-css/flags/4x3/us.svg"
+import companyLogo from "../../Assets/svg/logos/logo.svg"
+
+
+
+
 class Header extends Component {
     render() {
         return (
@@ -156,7 +162,7 @@ class Header extends Component {
                                    data-unfold-animation-in="slideInUp"
                                    data-unfold-animation-out="fadeOut">
                                     <img className="u-unfold__icon"
-                                         src="../../assets/vendor/flag-icon-css/flags/4x3/us.svg" alt="SVG" />
+                                         src={USFlag} alt="SVG" />
                                         <span className="d-inline-block d-sm-none">US</span>
                                         <span className="d-none d-sm-inline-block">United States</span>
                                         <span className="fa fa-angle-down u-unfold__icon-pointer"></span>
@@ -290,7 +296,7 @@ class Header extends Component {
                             {/*  Logo*/}
                             <a className="navbar-brand u-header__navbar-brand u-header__navbar-brand-top-space"
                                href="../home/index.html" aria-label="Front">
-                                <img src="../../assets/svg/logos/logo.svg" alt="Logo" />
+                                <img src={companyLogo} alt="Logo" />
                             </a>
                             {/*  End Logo*/}
 
@@ -686,7 +692,7 @@ class Header extends Component {
                                                     aria-labelledby="navLinkContactsServices">
                                                     <li className="dropdown-item px-0">
                                                         <a className="nav-link u-list__link px-4"
-                                                           href="../pages/contacts-agency.html">Contacts Agency</a>
+                                                           href="../pages/contact.html">Contacts Agency</a>
                                                     </li>
                                                     <li className="dropdown-item px-0">
                                                         <a className="nav-link u-list__link px-4"

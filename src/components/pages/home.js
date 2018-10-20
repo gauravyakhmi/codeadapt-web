@@ -2,7 +2,30 @@ import React, { Component } from 'react'
 
 import '../../Assets/vendor/fancybox/jquery.fancybox.css';
 
+import Typed from 'typed.js'
+import Fancybox from 'fancybox'
+
+
 class Home extends Component {
+
+    componentDidMount() {
+
+        const options = {
+            strings: ["more professional.", "perfect in every way.", "astonishing."],
+            typeSpeed: 60,
+            loop: true,
+            backSpeed: 25,
+            backDelay: 1500
+        };
+        // this.el refers to the <span> in the render() method
+        this.typed = new Typed(".u-text-animation--typing", options);
+
+
+        // initialization of popups
+        //$.HSCore.components.HSPopup.init('.js-fancybox');
+
+    }
+
     render() {
         return (
 
@@ -13,11 +36,11 @@ class Home extends Component {
             <div className="row">
             <div className="col-lg-5">
             <div className="g-mb-32">
-            <h1 className="display-4 font-size-48--md-down mb-3">Introducing Front</h1>
+            <h1 className="display-4 font-size-48--md-down mb-3">CodeAdapt</h1>
         <p>
-            Your company will look
+            Your company will look&nbsp;
             <span className="text-primary">
-              <strong className="u-text-animation u-text-animation--typing"></strong>
+               <strong className="u-text-animation u-text-animation--typing"></strong>
             </span>
             <br />
                 Covert more visitors, and win more business with Front template.
